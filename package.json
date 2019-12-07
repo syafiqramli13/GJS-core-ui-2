@@ -1,5 +1,5 @@
 {
-  "name": "testcoreui",
+  "name": "gjsapplication",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,6 +21,7 @@
     "react-app-polyfill": "^1.0.1",
     "react-chartjs-2": "^2.7.6",
     "react-dom": "^16.12.0",
+    "react-qr-reader": "^2.2.1",
     "react-router-config": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.2.0",
@@ -48,5 +49,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!**/*index.js",
+      "!src/serviceWorker.js",
+      "!src/polyfill.js"
+    ]
+  },
+  "engines": {
+    "node": ">=8.10",
+    "npm": ">=6"
   }
 }

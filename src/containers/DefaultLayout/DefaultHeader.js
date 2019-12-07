@@ -16,7 +16,7 @@ import {
   AppNavbarBrand,
   AppSidebarToggler
 } from "@coreui/react";
-import logo from "../../assets/img/brand/logo.svg";
+import logo from "../../assets/img/brand/header logo.png";
 import sygnet from "../../assets/img/brand/sygnet.svg";
 
 const propTypes = {
@@ -32,11 +32,15 @@ class DefaultHeader extends Component {
 
     return (
       <React.Fragment>
-        <AppSidebarToggler className="d-lg-none" display="md" mobile />
         <AppNavbarBrand
-          full={{ src: logo, width: 89, height: 25, alt: "CoreUI Logo" }}
-          minimized={{ src: sygnet, width: 30, height: 30, alt: "CoreUI Logo" }}
-        />
+          full={{ src: logo, width: 140, height: 85, alt: "GSJ" }}
+          // full={{ src: logo, alt: "GSJ" }}
+          minimized={{ src: sygnet, alt: "GSJ" }}
+        >
+          {/* <span>Gombak Jungle School</span> */}
+        </AppNavbarBrand>
+
+        <AppSidebarToggler className="d-lg-none" display="md" mobile />
         <AppSidebarToggler className="d-md-down-none" display="lg" />
 
         {/* <Nav className="d-md-down-none" navbar>
@@ -57,7 +61,7 @@ class DefaultHeader extends Component {
           </NavItem>
         </Nav> */}
 
-        <Nav className="ml-auto" navbar>
+        <Nav className="ml-auto " navbar>
           {/* nav icon dkt bar header */}
 
           {/* <NavItem className="d-md-down-none">
@@ -96,6 +100,9 @@ class DefaultHeader extends Component {
 
               <DropdownItem>
                 <i className="fa fa-user"></i> Profile
+              </DropdownItem>
+              <DropdownItem>
+                <i className="fa icon-note"></i> Register
               </DropdownItem>
               <DropdownItem>
                 <i className="fa icon-login"></i> Login

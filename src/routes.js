@@ -2,9 +2,6 @@ import React from "react";
 
 //const untuk import screen
 
-// const Cards = React.lazy(() => import("./views/Base/Cards"));
-// const Carousels = React.lazy(() => import("./views/Base/Carousels"));
-
 const AboutUs = React.lazy(() => import("./screens/PubAboutUs"));
 const Activity = React.lazy(() => import("./screens/PubActivity"));
 // const Archive = React.lazy(() => import("./screens/Archive"));
@@ -21,7 +18,9 @@ const ParticipantList = React.lazy(() =>
   import("./screens/AdminParticipantList")
 );
 const POS = React.lazy(() => import("./screens/AdminPOS"));
-const Register = React.lazy(() => import("./screens/AdminRegister"));
+const RegisterParticipant = React.lazy(() => import("./screens/AdminRegister"));
+const QRscanner = React.lazy(() => import("./screens/QRscanner"));
+const UpdateProfile = React.lazy(() => import("./screens/UpdateProfile"));
 
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 
@@ -40,6 +39,7 @@ const routes = [
   { path: "/Contact", name: "Contact", component: Contact },
   { path: "/Inquiries", name: "Inquiries", component: Inquiries },
 
+  //admin
   { path: "/Dashboard", name: "Dashboard", component: Dashboard },
   { path: "/Inventory", name: "Inventory", component: Inventory },
   {
@@ -48,7 +48,13 @@ const routes = [
     component: ParticipantList
   },
   { path: "/POS", name: "POS", component: POS },
-  { path: "/Register", name: "Register", component: Register }
+  {
+    path: "/RegisterParticipant",
+    name: "RegisterParticipant",
+    component: RegisterParticipant
+  },
+  { path: "/QRscanner", name: "QRscanner", component: QRscanner },
+  { path: "/UpdateProfile", name: "UpdateProfile", component: UpdateProfile }
 
   //{ path: "/theme", exact: true, name: "Theme", component: Colors },
   // { path: "/theme/colors", name: "Colors", component: Colors },
